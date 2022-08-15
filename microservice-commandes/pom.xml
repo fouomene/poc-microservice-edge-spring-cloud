@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>mcommandes</name>
-	<description>Microservices pour simuler des paiements</description>
+	<description>Microservices pour simuler des commandes</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -21,7 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.1</spring-cloud.version>
 	</properties>
 

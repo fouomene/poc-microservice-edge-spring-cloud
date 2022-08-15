@@ -1,5 +1,9 @@
 # poc-microservice-edge-spring-cloud
-Mise en oeuvre de l'Architechture Microservice avec Spring Cloud et ses Edge Microservices :
+
+Architecture
+![alt text](https://fouomene.com/architecture-microservice.jpg)
+
+Mise en oeuvre de l'architechture Microservice avec Spring Cloud et ses Edge Microservices :
 
 - **Spring Cloud Bootstrap** (e.g. Bootstrap context and @RefreshScope)
 
@@ -24,27 +28,38 @@ Mise en oeuvre de l'Architechture Microservice avec Spring Cloud et ses Edge Mic
 	
 - **Spring Cloud Observability**
     - **Sleuth** : Permet de donner des ID uniques à chaque requête, c'est 
-	- **Zipkin** Client : permet expoxer les traces vers Zipkin Server.
+	- **Zipkin** Client : permet exposer les traces vers Zipkin Server.
 	
 - **Spring Boot Actuator** : expose une API qui donne des informations sur le microservice concerné, mais ne propose pas d'interface graphique.
 
 - **Zipkin Server** : permet de tracer les requêtes de service en service uniquement si ces services intègrent ses dépendances.
 
 
-# Step 1: Telecharger et Demarrer Zipkin server
-curl -sSL https://zipkin.io/quickstart.sh | bash -s
-java -jar zipkin.jar
+# Step 1 : Télécharger et Démarrer Zipkin Server
+	curl -sSL https://zipkin.io/quickstart.sh | bash -s
+	java -jar zipkin.jar
 
-# Step 1: Demarrer les différents microservices spring-cloud.
-ordre recommandé
+# Step 2 : Demarrer les différents microservices.
+	mvn spring-boot:run
+Ordre recommandé
 - config-server
 - eureka-server
 - springcloudgateway-server
-- microservice-produits
+- microservice-produits (deux instances Ex port 8001,8011)
 - microservice-commandes
 - microservice-paiement
 - clientui
 
+
+Eureka Server
+![alt text](https://fouomene.com/eureka-server.jpg)
+
+Zipkin Server
+![alt text](https://fouomene.com/zipkin.jpg)
+![alt text](https://fouomene.com/zipkin2.jpg)
+
+Microservice ClientUI
+![alt text](https://fouomene.com/minicommerce.jpg) 
 
 
 

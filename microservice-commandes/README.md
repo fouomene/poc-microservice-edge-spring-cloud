@@ -1,4 +1,4 @@
-# microservice-produits
+# microservice-commandes
 
 # Step 1 : Demarrer le microservice
 	mvn spring-boot:run
